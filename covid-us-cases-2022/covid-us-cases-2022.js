@@ -10,7 +10,7 @@ function plotData(data) {
 	var keys = data.map(a => a.date),
 		cases = data.map(a => a.cases);
 
-	keys.unshift("xyz");
+	keys.unshift("dates");
 	cases.unshift("cases");
 
 	var columns = [
@@ -21,7 +21,7 @@ function plotData(data) {
 	var chart = bb.generate({
 	    bindto: "#covid-us-cases-2022",
 	    data: {
-	    	x: "xyz",
+	    	x: "dates",
 	        type: "line",
 	        columns: columns
   	    },

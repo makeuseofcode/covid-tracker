@@ -11,7 +11,7 @@ function plotData(data) {
 		cases = data.map(a => a.cases),
 		columns;
 
-	keys.unshift("xyz");
+	keys.unshift("dates");
 	cases.unshift("cases");
 
 	columns = [ keys, cases ];
@@ -19,7 +19,7 @@ function plotData(data) {
 	bb.generate({
 	    bindto: "#covid-us-cases-weekly",
 	    data: {
-	    	x: "xyz",
+	    	x: "dates",
 	        columns: columns
   	    },
 	    axis: {

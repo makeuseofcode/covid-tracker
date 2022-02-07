@@ -10,25 +10,19 @@ function plotData(data) {
 	var keys = data.map(a => a.date),
 		cases = data.map(a => a.cases);
 
-	keys.unshift("xyz");
+	keys.unshift("dates");
 	cases.unshift("cases");
 
-	var columns = [
-		keys,
-		cases
-	];
-
-	var chart = bb.generate({
+	bb.generate({
 	    bindto: "#covid-all-us-cases",
 	    data: {
-	    	x: "xyz",
+	    	x: "dates",
 	        type: "line",
 	        columns: [ keys, cases ]
   	    },
 	    axis: {
 	    	x: {
 	    		type: "category",
-	    		clipPath: false,
 	    		tick: {
 	    			count: 10
 	    		}
